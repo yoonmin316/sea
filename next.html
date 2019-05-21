@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <title>WELCOME to SEA</title>
+    <link rel="stylesheet" href="sh.css">
+    <script type="text/javascript">
+       function random(){
+         var name = document.getElementById('nm');
+         var age = document.getElementById('ag');
+         var marine = ['오징어', '상어', '거북이', '고래', '멸치'];
+         var total = marine.length;
+         var num = Math.floor(Math.random()*total);
+         var result = name.value+'님에게 맞는 동물은 '+marine[num]+' 입니다.';
+         if(name.value === '허준수'||name.value === '준수'||name.value === '정준수'){
+           num = 0;
+           result = name.value+'님에게 맞는 동물은 '+marine[num]+' 입니다.';
+           location.href = marine[num]+'.html?to='+result;
+         }
+         else{
+         location.href = marine[num]+'.html?to='+result;
+        }
+       }
+       function main(){
+         var name = document.getElementById('nm');
+         var age = document.getElementById('ag');
+         if(name.value !== ''){
+           random();
+         }
+         else{
+           alert('이름을 입력해주세요');
+         }
+       }
+     </script>
+  </head>
+  <body>
+    <div id="elect">
+       <h1>다음 설문지를 작성하세요</h1>
+       <h3>1.이름을 적어주세요(본명을 적어주셔야 프로그램이 잘 돌아갑니다)</h3>
+       <p><input type="text" col="3" id="nm" name="nm" placeholder="이름을 입력하세요"></p>
+       <h3>2.나이대를 선택해주세요</h3>
+       <p><select id="ag">
+        <option class="" name="age">
+          10대 미만
+        </option>
+        <option class="" name="age">
+          10대
+        </option>
+        <option class="" name="age">
+          20대 ~ 30대
+        </option>
+        <option class="" name="age">
+          40대 이상
+        </option>
+       </select></p>
+         <div class="button" onclick="main();">Submit</div>
+    </div>
+    <article id="j">
+    </article>
+  </body>
+</html>

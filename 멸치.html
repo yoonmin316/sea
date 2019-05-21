@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <title>멸치</title>
+    <link rel="stylesheet" href="sh.css">
+    <script>
+     var url = location.href;
+     var topic = url.substr(35);
+     var result = topic.replace("%20", " ");
+     var i = 0;
+     while(i < 4){
+       result = result.replace("%20", " ");
+       i = i + 1;
+     }
+    </script>
+  </head>
+  <body>
+    <div id="elect">
+      <h1>멸치</h1>
+      <h2><script>document.write(result);</script></h2>
+     <div><img class="movement" src="멸치.png" width="200px" heght="200px"></div>
+    </div>
+  </body>
+</html>

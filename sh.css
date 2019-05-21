@@ -1,0 +1,95 @@
+@keyframes zoomout {
+  from { margin-left: 400px; width: 0px; height: 0px;}
+  to{width: 50%; height: 300px;}
+}
+@keyframes zoomcopy {
+  0% { margin-left: 400px; margin-right: auto;}
+  50% { width: 0px; height: 0px;}
+  100%{width: 50%; height: 300px;}
+}
+@keyframes hide {
+  from{display: none;}
+  to{display: block;}
+}
+@keyframes spin {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+@keyframes go {
+  0%{left: 50px;}
+  50%{left: 800px;}
+  100%{left: 50px;}
+}
+body{
+  background-image: url('sea.jpg');
+  font-family: monospace;
+  font-size: 25px;
+}
+div{
+  border-radius: 10px;
+}
+#back{
+  width: 50%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  color: powderblue;
+  background-color: black;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  animation: zoomout 5s;
+  overflow: hidden;
+}
+.movement{
+  position: relative;
+  animation: go 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+h1{
+  animation-name: hide;
+  animation-duration: 5s;
+}
+.button{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  background-color: black;
+  width: 120px;
+  padding-top: 20px;
+  height: 50px;
+  border: 1px solid orange;
+  text-align: center;
+  cursor:pointer;
+  vertical-align:middle;
+}
+a{
+  text-decoration: none;
+}
+#elect{
+  padding: 20px;
+  width: 60%;
+  height: 500px;
+  background-color: black;
+  color: powderblue;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+input[type=text]{
+  border: 5px solid yellow;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+}
+select{
+  width: 150px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  border: 5px solid yellow;
+}
